@@ -14,7 +14,7 @@ def on_activate(app):
     Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
     label = builder.get_object("label")
-    label.props.label = sys.argv[1]
+    label.props.label = " ".join(sys.argv[1:])
 
     window.fullscreen()
     window.present()
