@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <object class="GtkApplicationWindow" id="app_window">
+    <property name="default-width">400</property>
+    <property name="default-height">200</property>
+    <property name="title">Big Say</property>
+    <property name="css-classes">window</property>
+    <child>
+      <object class="GtkLabel" id="label">
+        <property name="css-classes">text</property>
+        <property name="wrap">true</property>
+      </object>
+    </child>
+  </object>
+</interface>
