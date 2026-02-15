@@ -1,0 +1,7 @@
+# nix stuff
+result
+.envrc
+.direnv
+
+# python stuff
+__pycache__

@@ -106,7 +106,10 @@ def on_activate(app):
     win = BigSayStyled(application=app)
     win.present()
 
-if __name__ == "__main__":
+def main():
     app = Gtk.Application(application_id="com.example.bigsay")
     app.connect('activate', on_activate)
     app.run(None)
+
+if __name__ == "__main__":
+    main()
