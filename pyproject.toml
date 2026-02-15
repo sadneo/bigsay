@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "bigsay"
+version = "0.1.0"
+description = "A high-visibility GTK4 text display tool"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pygobject>=3.46.0",
+]
+
+[project.scripts]
+bigsay = "bigsay.script:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bigsay"]
+
+[tool.ruff]
+# This handles the E402 issue we discussed earlier
+ignore = ["E402"]
