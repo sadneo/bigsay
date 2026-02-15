@@ -1,17 +1,24 @@
-{ lib
-, python3Packages
-, gtk4
-, gobject-introspection
-, pkg-config
-, wrapGAppsHook4
+{
+  lib,
+  python3Packages,
+  fetchFromGitHub,
+  gtk4,
+  gobject-introspection,
+  pkg-config,
+  wrapGAppsHook4,
 }:
 
-python3Packages.buildPythonApplication {
+python3Packages.buildPythonApplication rec {
   pname = "bigsay";
   version = "0.1.0";
   pyproject = true;
 
-  src = ./.;
+  src = fetchFromGitHub {
+    owner = "sadneo";
+    repo = "bigsay";
+    rev = "v${version}";
+    hash = "sha256-vRNIa9AnH/e7VxpHR1m2ono9F4Wev4uPd1HayYRj6XY=";
+  };
 
   nativeBuildInputs = [
     pkg-config
